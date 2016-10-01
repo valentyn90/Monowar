@@ -342,16 +342,7 @@ ul li {
 	$intro
 ========================================================================== */
 .intro {
-	background-color: #00aeda;
-}
-.intro h3 {
-	color: #fff;
-	margin-top: 0;
-}
-.intro p {
-	font-family: "Merriweather", Arial, sans-serif;
-	color: rgba(255, 255, 255, 0.75);
-	font-weight: 400;
+	background-color: transparent;
 }
 
 /* ------------------------------------------------------------------------------
