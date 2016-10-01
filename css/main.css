@@ -6,8 +6,8 @@
 	Typography
 -------------------------------------------------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
+@import url(//fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+@import url(//fonts.googleapis.com/css?family=Merriweather:300,400,500,600,700);
 p {
 	font-size: 13px;
 	line-height: 22.4px;
