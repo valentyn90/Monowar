@@ -345,6 +345,12 @@ ul li {
 	background-color: transparent;
 }
 
+@media (max-width: 767px) {
+    .video-section {
+        min-height: 450px
+    }
+}
+
 /* ------------------------------------------------------------------------------
 	Banner
 -------------------------------------------------------------------------------*/
@@ -577,3 +583,5 @@ footer .social-links li .fa:hover {
 #gmap {
 	margin-top: 7rem;
 }
+
+
