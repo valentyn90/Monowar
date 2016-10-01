@@ -43,16 +43,19 @@
 
       <title>Monowar</title>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/font-icon.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/jquery.fancybox.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/font-icon.css">
+      <link rel="stylesheet" href="css/animate.min.css">
+      <link href="http://vjs.zencdn.net/5.11.7/video-js.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+      <!-- If you'd like to support IE8 -->
+      <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+      <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -74,7 +77,7 @@
           <a href="#" class="nav-toggle">Menu<span></span></a> </div>
       </header>
       <!-- banner text -->
-      <div class="container">
+      <div class="container-fluid">
         <div class="col-md-10 col-md-offset-1">
           <div class="banner-text text-center">
             <h1>Hello</h1>
@@ -87,11 +90,18 @@
     </section><!-- header section --> 
     
     <!-- intro section -->
-    <section id="intro" class="section intro">
-      <div class="container">
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <h3>We've got what you need!</h3>
-          <p>Start Bootstrap has everything you need to get your new website up and in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+    <section id="intro" class="intro">
+      <div class="container-fluid>
+        <div class="row">
+          <video id="img/my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+            poster="poster-video.jpg" data-setup="{}">
+              <source src="https://bert.house/video/Bert_website.mp4"></source>
+              <source src="https://bert.house/video/Bert_website.webm"></source>
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
         </div>
       </div>
     </section><!-- intro section --> 
@@ -275,6 +285,7 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/jquery.fancybox.pack.js"></script> 
         <script src="js/jquery.waypoints.min.js"></script> 
+        <script src="http://vjs.zencdn.net/5.11.7/video.js"></script>
 
         <script src="js/main.js"></script>
 
