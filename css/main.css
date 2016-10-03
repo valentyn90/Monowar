@@ -69,7 +69,8 @@ a {
 	-ms-transition: all 150ms ease;
 	-o-transition: all 150ms ease;
 	transition: all 150ms ease; 
-	}
+	color: #fff;
+}
     
 a:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
@@ -103,6 +104,8 @@ ul li {
 .space {
 	margin-top: 60px;
 }
+::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
 /* ------------------------------------------------------------------------------
 	Header
@@ -335,7 +338,25 @@ ul li {
 	font-weight: 400;
 	line-height: 24px;
 	margin-top: 30px;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
+}
+
+.banner-text .social-links {
+	margin-bottom: 3rem;
+}
+
+.banner-text .social-links li {
+	display: inline;
+}
+
+.banner-text .social-links li .fa {
+	color: #fff;
+	padding: 1rem;
+}
+.banner-text .social-links li .fa:hover {
+	border-radius: 50%;
+	color: #000;
+	background-color: #fff;
 }
 
 /* ==========================================================================
@@ -351,436 +372,34 @@ ul li {
     }
 }
 
-/* ============================================================================
-		Resume
-==============================================================================*/
-#resume {
-  color: #fff;
-  background: linear-gradient(165deg, rgb(22, 135, 237), rgb(20, 55, 90));
-  background: -webkit-linear-gradient(165deg, rgb(22, 135, 237), rgb(20, 55, 90));
-}
-#resume h1 {
-  position: relative; 
-  padding-bottom: 20px;
-  margin-bottom: 60px;
-  border-bottom: solid 1px #d4d4d4;
-}
-#resume h1 span {
-  position: absolute;
-  bottom: -8px; 
-  display: block;
-  width: 40px;
-  height: 8px;
-  content: '';
-  background: #e74c3c;
-}
-#resume .quote {
-  padding-left: 18px;
-  margin: 14px 0;
-  border-left: 2px solid #e74c3c;
-}
-#resume .quote h5 {
-  padding-top: 4px;
-  margin: 0;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.3em;
-  color: #e74c3c; 
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-#resume .quote .dividewhite {
-  height: 10px;
-}
-#resume .quote p {
-  font-size: 1em;
-}
-#resume .personal-info {
-  padding-left: 3rem;
-}
-#resume .personal-info p span {
-  font-weight: bold;
-}
-#resume .personal-info .social-profiles {
-  display: inline-block;
-}
-#resume .personal-info .social-profiles .fa {
-  padding: .8rem;
-  margin-right: 1rem;
-  color: #fff;
-  background: transparent;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  -webkit-transition: background-color .3s;
-       -o-transition: background-color .3s;
-          transition: background-color .3s;
-}
-#resume .personal-info .social-profiles .fa:hover {
-  font-weight: bold; 
-  color: #333;
-  background-color: #fff;
-}
-#resume .experience ul li.date {
-  position: relative;
-  display: block;
-  margin-bottom: 0;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.2em;
-  color: #fff;
-  list-style: none;
-  -webkit-transition: all .35s ease-in-out;
-       -o-transition: all .35s ease-in-out;
-          transition: all .35s ease-in-out;
-}
-#resume .experience ul li.company-name {
-  display: block;
-  font-weight: bold;
-  text-transform: uppercase; 
-  list-style: none;
-}
-#resume .experience ul li.position {
-  display: block; 
-  list-style: none;
-}
-#resume .skill {
-  /* Styling an indeterminate progress bar */
-  /* Styling the determinate progress element */
-  /*
-		Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
-		-webkit-progress-bar -> To style the progress element container
-		-webkit-progress-value -> To style the progress element value.
-		*/
-  /* Let's spice up things little bit by using pseudo elements. */
-  /* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
-  /* Fallback technique styles */
-  /* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
-  /* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
-}
-#resume .skill li {
-  float: left;
-  width: 50%;
-  padding-right: 5.3333333%; 
-  list-style-type: none;
-}
-#resume .skill li:nth-child(even) {
-  margin-bottom: 5em;
-}
-#resume .skill h2 {
-  margin: 0 0 1.5em;
-  border-bottom: 1px solid #ccc;
-}
-#resume .skill progress:not(value) {
-  /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
-}
-#resume .skill progress[value] {
-  position: relative;
-  /* Add dimensions */
-  width: 100%;
-  height: 20px;
-  /* Get rid of the default appearance */
-  -webkit-appearance: none;
-  margin: 0 0 1.5em; 
-  /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
-  color: royalblue;
-  /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
-  background-color: whiteSmoke;
-  /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
-  border: none;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
-          box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
-
-     -moz-appearance: none;
-          appearance: none;
-}
-#resume .skill progress[value]::-webkit-progress-bar {
-  background-color: whiteSmoke;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
-          box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
-}
-#resume .skill progress[value]::-webkit-progress-value {
-  position: relative;
-  -webkit-background-size: 35px 20px, 100% 100%, 100% 100%;
-          background-size: 35px 20px, 100% 100%, 100% 100%;
-  border-radius: 3px;
-  /* Let's animate this */
-  -webkit-animation: animate-stripes 5s linear infinite;
-          animation: animate-stripes 5s linear infinite;
+/* ==========================================================================
+	About Me
+========================================================================== */
+#about {
+	background-image: url(../img/about-bg.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 550px;
 }
 
-@-webkit-keyframes animate-stripes {
-  100% {
-    background-position: -100px 0;
-  }
+#about .about-me {
+	margin-top: 9.5rem;
 }
 
-@-o-keyframes animate-stripes {
-  100% {
-    background-position: -100px 0;
-  }
+#about .about-me p {
+	font-size: 1.7rem;
+	line-height: 1.5;
+	color: #fefefe;
 }
 
-@keyframes animate-stripes {
-  100% {
-    background-position: -100px 0;
-  }
-}
-#resume .skill progress[value]::-webkit-progress-value:after {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  width: 5px;
-  height: 5px;
-  /* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
-  content: '';
-  background-color: white;
-  border-radius: 100%;
-}
-#resume .skill progress[value]::-moz-progress-bar {
-  /* Gradient background with Stripes */
-  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -moz-linear-gradient(left, #09c, #f44);
-  background-size: 35px 20px, 100% 100%, 100% 100%;
-  border-radius: 3px;
-  /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
-}
-#resume .skill .progress-bar {
-  /* Dimensions should be similar to the parent progress element. */
-  width: 100%;
-  height: 20px; 
-  background-color: whiteSmoke;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
-          box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
-}
-#resume .skill .progress-bar span {
-  display: block;
-  text-indent: -9999px; 
-  background-color: royalblue;
-  border-radius: 3px;
-}
-#resume .skill p[data-value] {
-  position: relative;
-}
-#resume .skill p[data-value]:after {
-  position: absolute;
-  right: 0; 
-  content: attr(data-value) "%";
-}
-#resume .skill .html5::-webkit-progress-value,
-    #resume .skill .python::-webkit-progress-value {
-  /* Gradient background with Stripes */
-  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -webkit-linear-gradient(left, #09c, #f44);
-}
-#resume .skill .css3::-webkit-progress-value,
-    #resume .skill .php::-webkit-progress-value {
-  /* Gradient background with Stripes */
-  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -webkit-linear-gradient(left, #09c, #ff0);
-}
-#resume .skill .jquery::-webkit-progress-value,
-    #resume .skill .node-js::-webkit-progress-value {
-  /* Gradient background with Stripes */
-  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -webkit-linear-gradient(left, #09c, #690);
-}
-#resume .skill .html5::-moz-progress-bar,
-    #resume .skill .php::-moz-progress-bar {
-  /* Gradient background with Stripes */
-  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -moz-linear-gradient(left, #09c, #f44);
-}
-#resume .skill .css3::-moz-progress-bar,
-    #resume .skill .php::-moz-progress-bar {
-  /* Gradient background with Stripes */
-  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -moz-linear-gradient(left, #09c, #ff0);
-}
-#resume .skill .jquery::-moz-progress-bar,
-    #resume .skill .node-js::-moz-progress-bar {
-  /* Gradient background with Stripes */
-  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .2)), -moz-linear-gradient(left, #09c, #690);
+#about .about-me a {
+	border-bottom: 1px dashed #fff;
 }
 
-
-/* ------------------------------------------------------------------------------
-	Banner
--------------------------------------------------------------------------------*/
-.service-section {
-	padding-top: 100px;
-	background: linear-gradient(165deg, rgb(24, 160, 190), rgb(37, 99, 199));
-  	background: -webkit-linear-gradient(165deg, rgb(24, 160, 190), rgb(37, 99, 199));
-}
-.services {
-	margin-bottom: 50px;
-}
-.services-list .service-block {
-    margin-bottom: 25px;
-}
-.services-list .service-block .ico {
-    font-size: 38px;
-    float: left;
-}
-.services-list .service-block .text-block {
-    margin-left: 58px;
-}
-.services-list .service-block .text-block .name {
-    font-size: 20px;
-    font-weight: 900;
-    margin-bottom: 5px;
-}
-.services-list .service-block .text-block .info {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-.services-list .service-block .text-block .text {
-    font-size: 12px;
-    line-height: normal;
-    font-weight: 300;
-}
-.highlight {
-    color: #2ac5ed;
-    font-weight:bold;
-}                    
-
-/* ------------------------------------------------------------------------------
-	Works
--------------------------------------------------------------------------------*/
-/*#works {
-	background: linear-gradient(117deg, rgb(220, 212, 20), rgb(24, 186, 39));
-  	background: -webkit-linear-gradient(117deg, rgb(220, 212, 20), rgb(24, 186, 39));
-}*/
-.work {
-  -moz-box-shadow: 0 0 0 1px #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff;
-  overflow: hidden;
-  position: relative;
-  }
-  .work img
-  {
-	width:100%;
-	height:100%;  
-  }
-  .work .overlay {
-    background: rgba(232, 83, 79, 0.9);
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    -moz-transition: opacity, 0.3s;
-    -o-transition: opacity, 0.3s;
-    -webkit-transition: opacity, 0.3s;
-    transition: opacity, 0.3s; }
-  .work .overlay-caption {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  .work h5, .work p, .work img {
-    -moz-transition: all, 0.5s;
-    -o-transition: all, 0.5s;
-    -webkit-transition: all, 0.5s;
-    transition: all, 0.5s; }
-  .work h5, .work p {
-    color: #fff;
-    margin: 0;
-    opacity: 0; }
-  .work h5 {
-    margin-bottom: 5px;
-    -moz-transform: translate3d(0, -200%, 0);
-    -ms-transform: translate3d(0, -200%, 0);
-    -webkit-transform: translate3d(0, -200%, 0);
-    transform: translate3d(0, -200%, 0); }
-  .work p {
-    -moz-transform: translate3d(0, 200%, 0);
-    -ms-transform: translate3d(0, 200%, 0);
-    -webkit-transform: translate3d(0, 200%, 0);
-    transform: translate3d(0, 200%, 0); }
-
-.work-box:hover img {
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2); }
-.work-box:hover .overlay {
-  opacity: 1; }
-  .work-box:hover .overlay h5, .work-box:hover .overlay p {
-    opacity: 1;
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-.flex-control-paging li a 
-{
-	background: rgba(255, 255, 255, 0) none repeat scroll 0 0;
-}
-
-.flex-control-paging li a.flex-active {
-	background: rgba(255, 255, 255, 0) none repeat scroll 0 0;
-}
-
-/* ------------------------------------------------------------------------------
-	Work animation
--------------------------------------------------------------------------------*/
-.work:nth-child(1) {
-  -moz-animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s; }
-.work:nth-child(2) {
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s; }
-.work:nth-child(3) {
-  -moz-animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s; }
-.work:nth-child(4) {
-  -moz-animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s; }
-.work:nth-child(5) {
-  -moz-animation-delay: 0.8s;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s; }
-.work:nth-child(6) {
-  -moz-animation-delay: 0.7s;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s; }
-.work:nth-child(7) {
-  -moz-animation-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s; }
-.work:nth-child(8) {
-  -moz-animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s; }
-
-.animated {
-  visibility: visible; }
-
-
-/* Mobile Only */
-@media (max-width: 767px) {
-    .page-header, .control-box {
-        text-align: center;
-    } 
-}
-@media (max-width: 479px) {
-    .caption {
-        word-break: break-all;
-    }
-}
-
-
-li { list-style-type:none;}
-
-::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
-::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
 /* ------------------------------------------------------------------------------
 	Footer
@@ -793,6 +412,7 @@ footer {
 	padding: 1rem 0;
 	width: 100%;
 	text-align: center;
+	display: none;
 }
 
 footer .social-links li {
