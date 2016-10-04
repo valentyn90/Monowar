@@ -41,26 +41,6 @@ h5 {
 /* ------------------------------------------------------------------------------
 	Global Styles
 -------------------------------------------------------------------------------*/
-.btn {
-	background-color: #3bc492;
-	color: #fff;
-	font-size: 1.5rem;
-	font-weight: 600;
-	border: 0;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	display: inline-block;
-	text-transform: uppercase;
-}
-.btn:hover, .btn:focus {
-	background-color: #3d3d3d;
-	color: #fff;
-}
-.btn-large {
-	padding: 15px 40px;
-}
-
 img { max-width:100%; }
 
 a {
@@ -91,19 +71,7 @@ ul, ol {
 ul li {
 	list-style: none;
 }
-.section {
-	padding: 90px 0;
-}
-.no-padding {
-	padding: 0;
-}
-.no-gutter [class*=col-] {
-	padding-right: 0;
-	padding-left: 0;
-}
-.space {
-	margin-top: 60px;
-}
+
 ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
@@ -353,10 +321,38 @@ ul li {
 	color: #fff;
 	padding: 1rem;
 }
+.banner-text .social-links li .fa-facebook:hover {
+	color: #3b5998;
+}
+.banner-text .social-links li .fa-twitter:hover {
+	color: #1da1f2;
+}
+.banner-text .social-links li .fa-linkedin:hover {
+	color: #0077b5;
+}
 .banner-text .social-links li .fa:hover {
 	border-radius: 50%;
-	color: #000;
 	background-color: #fff;
+}
+
+.btn-large {
+	padding: 15px 40px;
+	background-color: #fff;
+	color: #777;
+	font-size: 1.5rem;
+	font-weight: 600;
+	border: 0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+.btn-large:hover {
+	background-color: #3d3d3d;
+	color: #fff;
+}
+.btn-large a:hover {
+	color: #fff;
 }
 
 /* ==========================================================================
@@ -453,12 +449,19 @@ footer .social-links li .fa:hover {
 	margin-top: 7rem;
 	font-size: 2rem;
 	line-height: 1.5;
+	color: #fff;
 }
 
 #contact-info h1 span {
 	font-size: 1.5rem;
 	line-height: 1;
+	#fff;
 }
 
 
-
+#fo {
+	background-image: url(http://i.imgur.com/Zx1pHum.png);
+	background-color: #728393;
+	background-repeat: repeat;
+	min-height: 30.5px;
+}
