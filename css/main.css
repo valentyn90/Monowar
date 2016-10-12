@@ -460,7 +460,7 @@ footer .social-links li .fa:hover {
 }
 
 
-#fo {
+#wave {
 	background-image: url(http://i.imgur.com/Zx1pHum.png);
 	background-color: #728393;
 	background-repeat: repeat;
@@ -472,7 +472,17 @@ footer .social-links li .fa:hover {
 
 
 
-/* Career */
+/*============ Career ============*/
+.career-bg {
+	background-image: url(../img/career-bg.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
 .side-buttons-container {
   position: fixed;
@@ -601,6 +611,7 @@ footer .social-links li .fa:hover {
   background-color: #da2;
 }
 .big-section {
+	padding-top: 3rem;
   display: block;
   position: relative;
   overflow: hidden;
