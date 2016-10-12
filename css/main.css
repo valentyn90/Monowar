@@ -318,19 +318,18 @@ ul li {
 	display: inline;
 }
 
-.banner-text .social-links li .fa {
-	color: #fff;
-	padding: 1rem;
+.banner-text .social-links li img {
+	height: 50px;
+    width: 50px;
+    transition: 0.3s ease;
+    margin: 14px 2px;
+    cursor: pointer;
 }
-.banner-text .social-links li .fa-facebook:hover {
-	color: #3b5998;
+.banner-text .social-links li img:hover {
+	transform: scale(1.2);
+    transition: 0.3s cubic-bezier(0.3, 0.2, 0, 2.5);
 }
-.banner-text .social-links li .fa-twitter:hover {
-	color: #1da1f2;
-}
-.banner-text .social-links li .fa-linkedin:hover {
-	color: #0077b5;
-}
+
 .banner-text .social-links li .fa:hover {
 	border-radius: 50%;
 	background-color: #fff;
@@ -385,12 +384,19 @@ ul li {
 
 #about .about-me {
 	margin-top: 9.5rem;
+	transform-style: preserve-3d;
 }
 
 #about .about-me p {
 	font-size: 1.7rem;
 	line-height: 1.5;
 	color: #fefefe;
+	animation: rotate 1s linear;
+}
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 #about .about-me a {
