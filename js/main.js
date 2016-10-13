@@ -9,18 +9,6 @@ $(document).ready(function() {
 			$('#header').removeClass('fixed');
 		}
 	});
-	
-	// Waypoints
-	$('.work').waypoint(function() {
-		$('.work').addClass('animated fadeIn');
-	}, {
-		offset: '75%'
-	});
-	$('.download').waypoint(function() {
-		$('.download .btn').addClass('animated tada');
-	}, {
-		offset: '75%'
-	});
 
 	
 	// Page Scroll
