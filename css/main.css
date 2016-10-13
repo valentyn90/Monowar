@@ -278,11 +278,11 @@ ul li {
 	transform: translateY(0) rotate(-45deg);
 }
 /* ------------------------------------------------------------------------------
-	Banner
+							Banner
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-image: url(../img/home-top.jpg);
+	background-image: url(../img/top-bg.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
@@ -445,7 +445,7 @@ footer .social-links li .fa:hover {
 -------------------------------------------------------------------------------*/
 
 .contact-banner {
-	background-image: url(../img/home-top.jpg);
+	background-image: url(../img/contact-top.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
