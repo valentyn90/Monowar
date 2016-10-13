@@ -56,6 +56,10 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <!-- Loader -->
+        <div class="loader"></div>
+        <!-- #Loader -->
+
     <!-- header section -->
     <section class="banner" role="banner">
       <header id="header">
@@ -140,6 +144,11 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/video.min.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+          $(window).load(function() {
+            $(".loader").fadeOut("slow");
+          })
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
