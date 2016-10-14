@@ -371,26 +371,15 @@ a.btn-large:active {
 	outline: 0;
 }
 .btn-large:hover:before {
-	content: "Click to Download Resume";
+	content: "Download Resume";
 }
 
 /* ==========================================================================
 	Video
 ========================================================================== */
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
+a.play {
+	padding: 10px;
 }
-.button:hover {
-  background: #06D85F;
-}
-
 .overlay {
   position: fixed;
   top: 0;
