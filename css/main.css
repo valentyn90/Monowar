@@ -479,27 +479,7 @@ p + a {
 	clip: rect(0, 100vw, 100vh, 100vw);
 	display: table;
 }
-.center-y {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	color: #fff;
-}
-h3 {
-	font-size: 5rem;
-	font-style: italic;
-}
-h3 + a {
-	font-size: 1.6rem;
-	display: inline-block;
-	color: #fff;
-	margin-top: 2rem;
-}
-h3, h3 + a {
-	opacity: 0;
-	transition: opacity .7s 0s, transform .5s .2s;
-	transform: translate3d(0, 50%, 0);
-}
+
 li.current h3, li.current h3 + a {
 	opacity: 1;
 	transition-delay: 1s;
@@ -794,7 +774,6 @@ footer .social-links li .fa:hover {
   background-color: #da2;
 }
 .big-section {
-	padding-top: 3rem;
   display: block;
   position: relative;
   overflow: hidden;
@@ -823,6 +802,13 @@ footer .social-links li .fa:hover {
 .intro h1 span {
 	font-size: 4rem;
 	line-height: 1;
+}
+.big-section h3 {
+	color: #333;
+}
+
+.big-section p {
+	color: #333;
 }
 
 .page-section-two {
